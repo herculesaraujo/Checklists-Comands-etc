@@ -49,3 +49,8 @@ docker rm 2c3
 
 ### 15. Remove contêiner parados
 docker container prune
+
+### 15. Remove Todos os contêiner ( parados ou não )
+docker rm -f $(docker ps -aq) 
+-f: força remoção dos em execução
+q: não mostar o retorno da lista
