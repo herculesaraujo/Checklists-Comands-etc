@@ -76,3 +76,12 @@ docker container list [-a | --all]
 ```
    Obs: -f: força remoção dos em execução
    q: não mostar o retorno da lista
+   
+
+### 15. Remove Todos as imagens
+```js
+  docker rmi $(docker images -q)
+```
+-q- é a opção usada para retornar os IDs exclusivos
+   
+   
