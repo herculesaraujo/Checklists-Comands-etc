@@ -70,18 +70,22 @@ docker container list [-a | --all]
 ```js
   docker container prune
 ```
+
+```js
+  docker rm $(docker ps -a -q)
+```
 ### 15. Remove Todos os contêiner ( parados ou não )
 ```js
   docker rm -f $(docker ps -aq) 
 ```
    Obs: -f: força remoção dos em execução
-   q: não mostar o retorno da lista
+   -q: não mostar o retorno da lista, apenas ID
    
 
 ### 15. Remove Todos as imagens
 ```js
   docker rmi $(docker images -q)
 ```
--q- é a opção usada para retornar os IDs exclusivos
+   -q: não mostar o retorno da lista, apenas ID
    
    
